@@ -24,8 +24,11 @@ function App() {
 }
 
 /** Set these as needed! */
-const DEFAULT_NODE_COLOR = [0, 0, 0];
-const DEFAULT_ROUTE_COLOR = [0, 255, 0];
+const DEFAULT_NODE_COLOR = [0, 128, 255];
+const DEFAULT_HIGHWAY_COLOR = [0, 0, 0];
+const DEFAULT_ROUTE_COLOR = [255,0,0];
+const START_NODE_COLOR = [255, 255, 0];
+const END_NODE_COLOR = [255, 255, 0];
 
 function DataVisualization() {
   const [data, setData] = useState(null);
@@ -73,7 +76,7 @@ function DataVisualization() {
         Long2: record.get('r.long2'),
         Lat2: record.get('r.lat2'),
         distance: record.get('r.distance'),
-        color: DEFAULT_ROUTE_COLOR
+        color: DEFAULT_HIGHWAY_COLOR
       }));
 
       setData({ locations, connections });
@@ -134,6 +137,7 @@ useEffect(() => {
   if (!data) return null;
 
   const layers = [
+    /** Layer for all of the highway road segments */
     new LineLayer({
       id: 'connections',
       data: data.connections,
@@ -142,15 +146,17 @@ useEffect(() => {
       getColor: d => d.color,
       getWidth: 1
     }),
+    /** Layer for the route segments */
     (shortestPath && new LineLayer({
       id: 'shortestPath',
       data: shortestPath.connections,
       getSourcePosition: d => [d.Long1, d.Lat1],
       getTargetPosition: d => [d.Long2, d.Lat2],
-      getColor: [255, 0, 0],
+      getColor: DEFAULT_ROUTE_COLOR,
       getWidth: 3,
       key: shortestPath.distance
     })),
+    /** The layer for all of the highway nodes */
     new ScatterplotLayer({
       id: 'locations',
       data: data.locations,
@@ -163,23 +169,47 @@ useEffect(() => {
           const { Long1, Lat1 } = info.object;
           if (!highway){
             setHighway(info.object);
-          } else {
+            setViewState(prevState => ({
+              ...prevState,
+              longitude: Long1,
+              latitude: Lat1,
+              zoom: 10
+            }));
+          } else if (info.object.name !== highway.name) {
             setNodeB(info.object);
+            setViewState(prevState => ({
+              ...prevState,
+              longitude: (Long1 + highway.Long1) / 2,
+              latitude: (Lat1 + highway.Lat1) / 2,
+              zoom: 8
+            }));
           }
-          setViewState(prevState => ({
-            ...prevState,
-            longitude: Long1,
-            latitude: Lat1,
-            zoom: 10
-          }));
         }
       }
+    }),
+    /** For the start destination node */
+    new ScatterplotLayer({
+      id: 'Start Location',
+      data: highway ? [highway] : [],
+      getPosition: d => [d.Long1, d.Lat1],
+      getFillColor: d => START_NODE_COLOR,
+      getRadius: 1000,
+      pickable: true
+    }),
+    /** For end destination node */
+    new ScatterplotLayer({
+      id: 'Start Location',
+      data: highway ? [nodeB] : [],
+      getPosition: d => [d.Long1, d.Lat1],
+      getFillColor: d => END_NODE_COLOR,
+      getRadius: 1000,
+      pickable: true
     })
   ];
-
   const reset = () => {
     setHighway(null);
     setNodeB(null);
+    setShortestPath(null);
   }
 
   return (
@@ -189,11 +219,11 @@ useEffect(() => {
         {highway ? <h2 style={{ position: 'relative', zIndex: 10 }}>Start Destination: {highway.name}</h2> : 
           <h2 style={{ position: 'relative', zIndex: 10 }}>Click on a highway to explore! (Wow!)</h2>}
         {nodeB && <h2 style={{ position: 'relative', zIndex: 10 }}>End Destination: {nodeB.name}</h2>}
-        {shortestPath && highway && nodeB && (
+        {highway && nodeB && shortestPath &&
           <h2 style={{ position: 'relative', zIndex: 10 }} key={shortestPath.distance}>
-            Shortest Distance from {highway.name} to {nodeB.name}: {shortestPath.distance.toFixed(2)} km
+            Route Distance from {highway.name} to {nodeB.name}: {shortestPath.distance.toFixed(2)} km
           </h2>
-        )}
+        }
         { highway && nodeB && <button onClick={() => reset()}>Plan New Route</button>}
       </div>
       <DeckGL
