@@ -1,0 +1,162 @@
+2025-02-25 02:44:18.459+0000 INFO  Logging config in use: File '/Users/robbyluiten/documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-02-25 02:44:18.467+0000 INFO  Starting...
+2025-02-25 02:44:19.177+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-02-25 02:44:19.853+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-02-25 02:44:21.981+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-02-25 02:44:22.018+0000 INFO  Bolt enabled on localhost:7687.
+2025-02-25 02:44:22.427+0000 INFO  HTTP enabled on localhost:7474.
+2025-02-25 02:44:22.427+0000 INFO  Remote interface available at http://localhost:7474/
+2025-02-25 02:44:22.428+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-02-25 02:44:22.429+0000 INFO  name: system
+2025-02-25 02:44:22.429+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-02-25 02:44:22.429+0000 INFO  Started.
+2025-02-25 02:47:42.761+0000 WARN  [bolt-6] The client is unauthorized due to authentication failure.
+2025-02-25 02:47:42.794+0000 WARN  [bolt-7] The client is unauthorized due to authentication failure.
+2025-02-25 02:47:42.795+0000 WARN  [bolt-8] The client is unauthorized due to authentication failure.
+2025-02-25 02:47:42.833+0000 WARN  [bolt-9] The client has provided incorrect authentication details too many times in a row.
+2025-02-25 02:47:42.834+0000 WARN  [bolt-10] The client has provided incorrect authentication details too many times in a row.
+2025-02-25 02:47:42.848+0000 WARN  [bolt-13] The client has provided incorrect authentication details too many times in a row.
+2025-02-25 02:48:18.911+0000 WARN  [bolt-14] The client is unauthorized due to authentication failure.
+2025-02-25 02:48:18.960+0000 WARN  [bolt-15] The client has provided incorrect authentication details too many times in a row.
+2025-02-25 02:48:18.968+0000 WARN  [bolt-16] The client has provided incorrect authentication details too many times in a row.
+2025-02-25 03:49:22.695+0000 INFO  Neo4j Server shutdown initiated by request
+2025-02-25 03:49:22.696+0000 INFO  Stopping...
+2025-02-25 03:49:28.442+0000 INFO  Stopped.
+2025-02-25 20:37:26.808+0000 INFO  Logging config in use: File '/Users/robbyluiten/documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-02-25 20:37:26.815+0000 INFO  Starting...
+2025-02-25 20:37:27.506+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-02-25 20:37:28.130+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-02-25 20:37:29.348+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-02-25 20:37:29.367+0000 INFO  Bolt enabled on localhost:7687.
+2025-02-25 20:37:29.736+0000 INFO  HTTP enabled on localhost:7474.
+2025-02-25 20:37:29.736+0000 INFO  Remote interface available at http://localhost:7474/
+2025-02-25 20:37:29.738+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-02-25 20:37:29.738+0000 INFO  name: system
+2025-02-25 20:37:29.738+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-02-25 20:37:29.738+0000 INFO  Started.
+2025-02-26 00:20:02.561+0000 INFO  Neo4j Server shutdown initiated by request
+2025-02-26 00:20:02.562+0000 INFO  Stopping...
+2025-02-26 00:20:08.292+0000 INFO  Stopped.
+2025-03-03 21:21:10.482+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-03-03 21:21:10.491+0000 INFO  Starting...
+2025-03-03 21:21:11.216+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-03 21:21:12.002+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-03 21:21:13.452+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-03 21:21:13.475+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-03 21:21:13.927+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-03 21:21:13.927+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-03 21:21:13.929+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-03 21:21:13.929+0000 INFO  name: system
+2025-03-03 21:21:13.929+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-03 21:21:13.929+0000 INFO  Started.
+2025-03-03 22:51:00.776+0000 INFO  Neo4j Server shutdown initiated by request
+2025-03-03 22:51:00.777+0000 INFO  Stopping...
+2025-03-03 22:51:11.653+0000 INFO  Stopped.
+2025-03-03 22:53:11.314+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-03-03 22:53:11.321+0000 INFO  Starting...
+2025-03-03 22:53:11.990+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-03 22:53:12.594+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-03 22:53:13.797+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-03 22:53:13.818+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-03 22:53:14.185+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-03 22:53:14.185+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-03 22:53:14.187+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-03 22:53:14.187+0000 INFO  name: system
+2025-03-03 22:53:14.187+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-03 22:53:14.187+0000 INFO  Started.
+2025-03-03 22:58:27.890+0000 INFO  Neo4j Server shutdown initiated by request
+2025-03-03 22:58:27.891+0000 INFO  Stopping...
+2025-03-03 22:58:38.857+0000 INFO  Stopped.
+2025-03-04 00:42:25.389+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-03-04 00:42:25.395+0000 INFO  Starting...
+2025-03-04 00:42:26.083+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-04 00:42:26.711+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-04 00:42:27.965+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-04 00:42:27.986+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-04 00:42:28.350+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-04 00:42:28.350+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-04 00:42:28.352+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-04 00:42:28.352+0000 INFO  name: system
+2025-03-04 00:42:28.352+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-04 00:42:28.352+0000 INFO  Started.
+2025-03-04 00:44:31.891+0000 INFO  Neo4j Server shutdown initiated by request
+2025-03-04 00:44:31.891+0000 INFO  Stopping...
+2025-03-04 00:44:42.667+0000 INFO  Stopped.
+2025-03-04 00:46:47.315+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-03-04 00:46:47.324+0000 INFO  Starting...
+2025-03-04 00:46:48.923+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-04 00:46:49.649+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-04 00:46:51.647+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-04 00:46:51.668+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-04 00:46:52.081+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-04 00:46:52.082+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-04 00:46:52.083+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-04 00:46:52.083+0000 INFO  name: system
+2025-03-04 00:46:52.083+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-04 00:46:52.084+0000 INFO  Started.
+2025-03-04 01:27:24.230+0000 INFO  Neo4j Server shutdown initiated by request
+2025-03-04 01:27:24.230+0000 INFO  Stopping...
+2025-03-04 01:27:30.140+0000 INFO  Stopped.
+2025-03-04 06:51:03.336+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-03-04 06:51:03.343+0000 INFO  Starting...
+2025-03-04 06:51:04.092+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-04 06:51:04.752+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-04 06:51:06.030+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-04 06:51:06.049+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-04 06:51:06.430+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-04 06:51:06.430+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-04 06:51:06.432+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-04 06:51:06.432+0000 INFO  name: system
+2025-03-04 06:51:06.432+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-04 06:51:06.432+0000 INFO  Started.
+2025-03-04 07:18:54.273+0000 INFO  Neo4j Server shutdown initiated by request
+2025-03-04 07:18:54.273+0000 INFO  Stopping...
+2025-03-04 07:19:01.217+0000 INFO  Stopped.
+2025-03-04 20:14:44.950+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-03-04 20:14:44.960+0000 INFO  Starting...
+2025-03-04 20:14:46.002+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-04 20:14:46.926+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-04 20:14:48.521+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-04 20:14:48.545+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-04 20:14:49.013+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-04 20:14:49.013+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-04 20:14:49.015+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-04 20:14:49.015+0000 INFO  name: system
+2025-03-04 20:14:49.015+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-04 20:14:49.016+0000 INFO  Started.
+2025-03-04 20:32:09.496+0000 ERROR Client triggered an unexpected error [Neo.DatabaseError.Statement.ExecutionFailed]: The shortest path algorithm does not work when the start and end nodes are the same. This can happen if you
+perform a shortestPath search after a cartesian product that might have the same start and end nodes for some
+of the rows passed to shortestPath. If you would rather not experience this exception, and can accept the
+possibility of missing results for those rows, disable this in the Neo4j configuration by setting
+`dbms.cypher.forbid_shortestpath_common_nodes` to false. If you cannot accept missing results, and really want the
+shortestPath between two common nodes, then re-write the query using a standard Cypher variable length pattern
+expression followed by ordering by path length and limiting to one result., reference b4d470a1-3093-40e7-a744-ed0d5c68914f.
+2025-03-04 22:38:26.263+0000 INFO  Neo4j Server shutdown initiated by request
+2025-03-04 22:38:26.263+0000 INFO  Stopping...
+2025-03-04 22:38:31.999+0000 INFO  Stopped.
+2025-03-04 22:39:33.761+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KoreanHighway/my-react-project/public/KOREAN HIGHWAY SERVER/conf/user-logs.xml'
+2025-03-04 22:39:33.767+0000 INFO  Starting...
+2025-03-04 22:39:34.464+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-04 22:39:35.093+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-04 22:39:36.352+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-04 22:39:36.373+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-04 22:39:36.756+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-04 22:39:36.757+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-04 22:39:36.758+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-04 22:39:36.758+0000 INFO  name: system
+2025-03-04 22:39:36.759+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-04 22:39:36.759+0000 INFO  Started.
+2025-03-04 22:42:39.363+0000 INFO  Neo4j Server shutdown initiated by request
+2025-03-04 22:42:39.363+0000 INFO  Stopping...
+2025-03-04 22:44:43.072+0000 INFO  Logging config in use: File '/Users/robbyluiten/Documents/WebGL Experiments/KoreanHighway/my-react-project/public/HIGHWAY_SERVER/conf/user-logs.xml'
+2025-03-04 22:44:43.079+0000 INFO  Starting...
+2025-03-04 22:44:43.752+0000 INFO  This instance is ServerId{10d68897} (10d68897-80d2-487e-a78b-c87abb9d01b1)
+2025-03-04 22:44:44.372+0000 INFO  ======== Neo4j 2025.01.0 ========
+2025-03-04 22:44:45.584+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2025-03-04 22:44:45.604+0000 INFO  Bolt enabled on localhost:7687.
+2025-03-04 22:44:45.967+0000 INFO  HTTP enabled on localhost:7474.
+2025-03-04 22:44:45.968+0000 INFO  Remote interface available at http://localhost:7474/
+2025-03-04 22:44:45.969+0000 INFO  id: 659AACD08B84446BDBC50A5AB33E9215387F2FEDBDC8366E33396DBF292F9CD3
+2025-03-04 22:44:45.969+0000 INFO  name: system
+2025-03-04 22:44:45.969+0000 INFO  creationDate: 2025-02-25T02:44:20.67Z
+2025-03-04 22:44:45.969+0000 INFO  Started.

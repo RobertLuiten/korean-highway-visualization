@@ -24,8 +24,8 @@ function App() {
 }
 
 /** Set these as needed! */
-const DEFAULT_NODE_COLOR = [0, 128, 255];
-const DEFAULT_HIGHWAY_COLOR = [0, 0, 0];
+const DEFAULT_NODE_COLOR = [0, 0, 0];
+const DEFAULT_HIGHWAY_COLOR = [0, 255, 0];
 const DEFAULT_ROUTE_COLOR = [255,0,0];
 const START_NODE_COLOR = [255, 255, 0];
 const END_NODE_COLOR = [255, 255, 0];
@@ -35,6 +35,8 @@ function DataVisualization() {
   const [nodeB, setNodeB] = useState(null);
   const [highway, setHighway] = useState(null);
   const [shortestPath, setShortestPath] = useState(null);
+  const [showDetails, setShowDetails] = useState(true);
+  const [showAbout, setShowAbout] = useState(false);
   const [viewState, setViewState] = useState({
     longitude: 0,
     latitude: 0,
@@ -206,6 +208,8 @@ useEffect(() => {
       pickable: true
     })
   ];
+
+  /** Basically resets so we can find new routes! */
   const reset = () => {
     setHighway(null);
     setNodeB(null);
@@ -214,18 +218,29 @@ useEffect(() => {
 
   return (
     <div>
-      <div style={{ backgroundColor: 'white', position: 'absolute', zIndex: 10, padding: 10, borderStyle: 'solid'}}>
+      {showDetails ? <div style={{ backgroundColor: 'white', position: 'absolute', zIndex: 10, padding: 10, borderStyle: 'solid'}}>
         <h1 style={{ position: 'relative', zIndex: 10 }}>Korean Highways 2011 Visualization</h1>
         {highway ? <h2 style={{ position: 'relative', zIndex: 10 }}>Start Destination: {highway.name}</h2> : 
-          <h2 style={{ position: 'relative', zIndex: 10 }}>Click on a highway to explore! (Wow!)</h2>}
+          <h2 style={{ position: 'relative', zIndex: 10 }}>Click on a highway to explore!</h2>}
         {nodeB && <h2 style={{ position: 'relative', zIndex: 10 }}>End Destination: {nodeB.name}</h2>}
         {highway && nodeB && shortestPath &&
           <h2 style={{ position: 'relative', zIndex: 10 }} key={shortestPath.distance}>
             Route Distance from {highway.name} to {nodeB.name}: {shortestPath.distance.toFixed(2)} km
           </h2>
         }
-        { highway && nodeB && <button onClick={() => reset()}>Plan New Route</button>}
-      </div>
+        { highway && <button onClick={() => reset()}>Set New Start Destination</button>}
+        { !showAbout && <button onClick={() => setShowAbout(true)}>About</button>}
+        { showAbout && <div>
+          <p>This is a visualization of the Korean highway System. Click on a dot to set your starting destination, then select
+            different end destinations to see the distance between them! You can reset the start destination by clicking the "Set New Start Destination" button above!
+            Happy Travels! - Rob
+          </p>
+          <button onClick={() => setShowAbout(false)}>Yeah yeah, I get it now. Let's explore!</button>
+          </div>}
+          <br></br>
+          <button onClick={() => setShowDetails(false)}>Hide details</button>
+      </div> : <div style={{ backgroundColor: 'white', position: 'absolute', zIndex: 10, padding: 10, borderStyle: 'solid'}}>
+        <button onClick={() => setShowDetails(true)}>Show details</button></div>}
       <DeckGL
         initialViewState={viewState}
         controller={true}
