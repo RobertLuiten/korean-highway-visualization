@@ -5,10 +5,12 @@ import neo4j from 'neo4j-driver';
 import DeckGL from '@deck.gl/react';
 import { ScatterplotLayer, LineLayer } from '@deck.gl/layers';
 
+/** My server's login information */
 const URI = 'bolt://localhost:7687';
 const USER = 'neo4j';
 const PASSWORD = 'PASSWORD';
 
+/** Neo4j driver! */
 const driver = neo4j.driver(URI, neo4j.auth.basic(USER, PASSWORD));
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
   );
 }
 
+/** Set these as needed! */
 const DEFAULT_NODE_COLOR = [0, 0, 0];
 const DEFAULT_ROUTE_COLOR = [0, 255, 0];
 
@@ -52,6 +55,7 @@ function DataVisualization() {
     }
   }, [highway, nodeB]);
 
+  /** This is just for loading the map, nothing with the querying! */
   useEffect(() => {
     if (records) {
       const locations = records.map(record => ({
@@ -85,6 +89,7 @@ function DataVisualization() {
     }
   }, [records]);
 
+/** Let the magic begin! */
 useEffect(() => {
     const fetchShortestPath = async () => {
       if (shortestPathParams) {
@@ -103,13 +108,15 @@ useEffect(() => {
           if (result.records.length > 0) {
             const path = result.records[0].get('path');
             const totalDistance = result.records[0].get('totalDistance');
-
-            const pathConnections = path.segments.map(segment => ({
-              Long1: segment.start.properties.longitude,
-              Lat1: segment.start.properties.latitude,
-              Long2: segment.end.properties.longitude,
-              Lat2: segment.end.properties.latitude,
+            const pathConnections = path.segments.map(segment => (
+              console.log(segment.relationship.properties),
+              {
+              Long1: segment.relationship.properties.long1,
+              Lat1: segment.relationship.properties.lat1,
+              Long2: segment.relationship.properties.long2,
+              Lat2: segment.relationship.properties.lat2,
             }));
+            console.log(pathConnections)
 
             setShortestPath({ connections: pathConnections, distance: totalDistance });
           }
@@ -135,6 +142,15 @@ useEffect(() => {
       getColor: d => d.color,
       getWidth: 1
     }),
+    (shortestPath && new LineLayer({
+      id: 'shortestPath',
+      data: shortestPath.connections,
+      getSourcePosition: d => [d.Long1, d.Lat1],
+      getTargetPosition: d => [d.Long2, d.Lat2],
+      getColor: [255, 0, 0],
+      getWidth: 3,
+      key: shortestPath.distance
+    })),
     new ScatterplotLayer({
       id: 'locations',
       data: data.locations,
@@ -158,14 +174,6 @@ useEffect(() => {
           }));
         }
       }
-    }),
-    shortestPath && new LineLayer({
-      id: 'shortestPath',
-      data: shortestPath.connections,
-      getSourcePosition: d => [d.Long1, d.Lat1],
-      getTargetPosition: d => [d.Long2, d.Lat2],
-      getColor: [255, 0, 0],
-      getWidth: 3
     })
   ];
 
